@@ -205,7 +205,7 @@ const BedrockAnthropicChatCompleteConfig: ProviderConfig = {
               msg.role === 'system' &&
               msg.content &&
               typeof msg.content === 'object' &&
-              msg.content[0].text
+              msg.content[0]?.text
             ) {
               systemMessage = msg.content[0].text;
             } else if (
