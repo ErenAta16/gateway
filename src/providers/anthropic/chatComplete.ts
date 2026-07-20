@@ -336,7 +336,7 @@ export const AnthropicChatCompleteConfig: ProviderConfig = {
               SYSTEM_MESSAGE_ROLES.includes(msg.role) &&
               msg.content &&
               typeof msg.content === 'object' &&
-              msg.content[0].text
+              msg.content[0]?.text
             ) {
               msg.content.forEach((_msg) => {
                 systemMessages.push({
